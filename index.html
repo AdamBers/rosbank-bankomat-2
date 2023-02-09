@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>РосБанк</title>
+    <link rel="shortcut icon" href="./img/title.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="header">
+                <img src="./img/logo.svg" alt="logo">
+            </div>
+            <form action="end.html" id='myForm'>
+                <div class="main-question">
+                    <p>Насколько в целом вы довольны работой банкоматов банка-партнера ***** при снятии или внесении
+                        средств на карту Росбанка?</p>
+                </div>
+                <p class="question-title">Оцените по шкале от 1 до 5, <br>
+                    где «1» означает «Совсем НЕ доволен» , <br> а
+                    «5» -
+                    «Очень доволен»
+                </p>
+                <div class="rating" onchange="handleStar(event)">
+                    <input type="radio" name="star" id="star1" value="5">
+                    <label for="star1" class="fa fa-star" id="star1label"></label>
+                    <input type="radio" name="star" id="star2" value="4">
+                    <label for="star2" class="fa fa-star" id="star2label"></label>
+                    <input type="radio" name="star" id="star3" value="3">
+                    <label for="star3" class="fa fa-star" id="star3label"></label>
+                    <input type="radio" name="star" id="star4" value="2">
+                    <label for="star4" class="fa fa-star" id="star4label"></label>
+                    <input type="radio" name="star" id="star5" value="1">
+                    <label for="star5" class="fa fa-star" id="star5label"></label>
+                </div>
+                <div class="error-message hidden" id='error-message'>
+                    <p class="message">Пожалуйста, выберите оценку от 1 до 5</p>
+                </div>
+                <div class="content">
+                    <div class="q-1 hidden" id='question1'>
+                        <p class="question">Что нам нужно улучшить?</p>
+                        <p class="sub-question">Можно выбрать несколько вариантов</p>
+                        <fieldset onchange="inputChange()">
+                            <input type="checkbox" id="amount" name="sadFor" value="amount">
+                            <label for="amount">Количество банкоматов в моем городе</label>
+                            <input type="checkbox" id="badWork" name="sadFor" value="badWork">
+                            <label for="badWork">Исправную работу банкоматов</label>
+                            <input type="checkbox" id="slowWork" name="sadFor" value="slowWork">
+                            <label for="slowWork">Скорость работы банкоматов</label>
+                            <input type="checkbox" id="notEnoughfunc" name="sadFor" value="notEnoughfunc">
+                            <label for="notEnoughfunc">Широту функционала в банкоматах</label>
+                            <input type="checkbox" id="badMenu" name="sadFor" value="badMenu">
+                            <label for="badMenu">Простоту меню</label>
+                            <input type="checkbox" id="another" name="sadFor" value="another"
+                                onchange="toggleComment()">
+                            <label for="another">Другое (укажите):</label>
+                        </fieldset>
+                    </div>
+                    <div class="error-message_2 hidden" id="error_2">
+                        <p class="message">Пожалуйста, выберите вариант ответа</p>
+                    </div>
+                    <div class="comment hidden" id="comment_div">
+                        <p class="comment_p ">Будем признательны Вам за любую дополнительную информацию о
+                            вашем опыте использования банкоматов Росбанка и банков-партнеров:</p>
+                        <textarea cols="60" name="text" wrap="soft" name="comment" id="comment"
+                            placeholder="Ваш комментарий..." value="" oninput="handleComment(event)"
+                            class=""></textarea>
+                    </div>
+                    <div class="error-message_3 hidden" id="error_3">
+                        <p class="message">Пожалуйста, введите комментарий</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <input type="submit" id="send" class="hidden" form="myForm" value="Оценить">
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
