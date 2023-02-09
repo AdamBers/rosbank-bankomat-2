@@ -8,6 +8,10 @@ var comment = document.getElementById('comment')
 var commentValue = ''
 const send = document.getElementById('send')
 const another = document.getElementById('another')
+const label_another = document.getElementById('label-another')
+const another_input = document.getElementById('another-input')
+const another_div = document.getElementById('another-div')
+
 let checked = document.querySelectorAll('input[type=checkbox]')
 
 document.addEventListener('gesturestart', function (e) {
@@ -47,8 +51,15 @@ function handleStar(event) {
     const question1 = document.getElementById('question1')
     const errorMessage = document.getElementById('error-message')
     error_2.classList.add('hidden')
+    error_3.classList.add('hidden')
+    another_input.classList.add('hidden')
+    another_div.classList.add('transparent')
+
     send.classList.remove('hidden')
+    comment_div.classList.remove('hidden')
     document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
+    commentValue = ''
+
     currentGrade = event.target.id
     errorMessage.classList.add('hidden')
     label1.style.color = '#E5E7EA'
@@ -86,7 +97,6 @@ function handleStar(event) {
         label2.style.color = '#E40038'
         label1.style.color = '#E40038'
         question1.classList.add('hidden')
-        comment.classList.add('hidden')
         comment_div.classList.add('hidden')
     }
 }
@@ -102,7 +112,10 @@ function auto_grow(element) {
 }
 
 function toggleComment() {
-    comment_div.classList.toggle('hidden')
+    another_div.classList.toggle('transparent')
+    another_input.classList.toggle('hidden')
+    another_input.focus()
+    another_input.select()
 }
 
 

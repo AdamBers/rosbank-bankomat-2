@@ -18,15 +18,13 @@ html {
 
 body {
     height: 100%;
-
     min-height: 720px;
     min-height: 100%;
 }
 
 
-.one {
+.wrapper {
     min-height: max-content;
-    margin-bottom: 65px;
 }
 
 .main-container {
@@ -73,8 +71,7 @@ form {
     text-align: center;
     color: #1E2025;
     margin: 0 20px 28px 20px;
-    text-align: justify;
-    text-align-last: center
+
 }
 
 .question {
@@ -100,10 +97,8 @@ form {
     background-color: #E5E7EA;
     width: fit-content;
     border-radius: 16px;
-    margin-bottom: 8px;
     cursor: pointer;
-    margin-right: 2px;
-    margin-left: 2px;
+    margin: 8px 2px;
 }
 
 input[type="checkbox"] {
@@ -134,6 +129,16 @@ input[type=checkbox]:checked+label {
     color: #fff;
 }
 
+#another:checked+label {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px 0 0 16px;
+    margin-right: 0;
+}
+
 .comment {
     color: gray;
     /* margin-bottom: 20px; */
@@ -150,17 +155,17 @@ input[type=checkbox]:checked+label {
     align-items: center;
     color: #000C1A;
     opacity: 0.5;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 input[type=text], textarea {
     border: none;
     border-bottom: 2px solid #E40038;
     width: 100%;
-    min-height: 40px;
+    /* min-height: 40px; */
     padding: 10px 15px;
     resize: none;
-    margin-bottom: 36px;
+    margin-bottom: 26px;
 }
 
 textarea:focus {
@@ -259,7 +264,6 @@ input[type=radio] {
     margin-bottom: 15px;
     color: red;
     position: relative;
-    top: -10px;
 }
 
 textarea::placeholder {
@@ -281,7 +285,7 @@ textarea::placeholder {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 12px;
     line-height: 14px;
-    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -344,4 +348,51 @@ textarea::placeholder {
 
 fieldset {
     border: none;
+}
+
+#send {
+    margin-top: 15px;
+}
+
+.another-div {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background: #001C3D;
+    border-radius: 16px;
+}
+
+#another-input {
+    width: calc(100% - 160px);
+    margin: 0;
+    padding: 0;
+    margin-right: 16px;
+    background: #001C3D;
+    /* border-radius: 0 16px 16px 0; */
+    border-bottom: 1px solid #fff;
+    outline: 0;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }

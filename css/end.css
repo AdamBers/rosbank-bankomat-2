@@ -73,6 +73,7 @@ body {
 
 
 #ready {
+    visibility: hidden;
     margin: 16px;
     min-width: calc(100% - 32px);
     height: 48px;

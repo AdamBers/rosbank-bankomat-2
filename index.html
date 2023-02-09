@@ -58,10 +58,16 @@
                             <label for="notEnoughfunc">Широту функционала в банкоматах</label>
                             <input type="checkbox" id="badMenu" name="sadFor" value="badMenu">
                             <label for="badMenu">Простоту меню</label>
-                            <input type="checkbox" id="another" name="sadFor" value="another"
-                                onchange="toggleComment()">
-                            <label for="another">Другое (укажите):</label>
+                            <div class="another-div transparent" id="another-div">
+                                <input type="checkbox" id="another" name="sadFor" value="another"
+                                    onchange="toggleComment()">
+                                <label for="another" id="label-another">Другое (укажите):</label>
+                                <input type="text" id="another-input" class="hidden">
+                            </div>
                         </fieldset>
+                        <div class="error-message_3 hidden" id="error_3">
+                            <p class="message">Пожалуйста, введите комментарий</p>
+                        </div>
                     </div>
                     <div class="error-message_2 hidden" id="error_2">
                         <p class="message">Пожалуйста, выберите вариант ответа</p>
@@ -73,9 +79,7 @@
                             placeholder="Ваш комментарий..." value="" oninput="handleComment(event)"
                             class=""></textarea>
                     </div>
-                    <div class="error-message_3 hidden" id="error_3">
-                        <p class="message">Пожалуйста, введите комментарий</p>
-                    </div>
+
                 </div>
             </form>
         </div>
