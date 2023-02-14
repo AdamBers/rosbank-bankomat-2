@@ -35,7 +35,7 @@ form.onsubmit = function (e) {
         error_2.classList.remove('hidden')
         e.preventDefault()
     }
-    if (commentValue.length < 1 && (another.checked === true)) {
+    if (document.getElementById("another-input").value.length < 1 && (another.checked === true)) {
         console.log(commentValue)
         error_3.classList.remove('hidden')
         e.preventDefault()
