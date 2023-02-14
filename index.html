@@ -43,25 +43,26 @@
                 <div class="error-message hidden" id='error-message'>
                     <p class="message">Пожалуйста, выберите оценку от 1 до 5</p>
                 </div>
+
                 <div class="content">
                     <div class="q-1 hidden" id='question1'>
-                        <p class="question">Что нам нужно улучшить?</p>
+                        <p class="question">Что именно вам не понравилось?</p>
                         <p class="sub-question">Можно выбрать несколько вариантов</p>
                         <fieldset onchange="inputChange()">
                             <input type="checkbox" id="amount" name="sadFor" value="amount">
                             <label for="amount">Количество банкоматов в моем городе</label>
                             <input type="checkbox" id="badWork" name="sadFor" value="badWork">
-                            <label for="badWork">Исправную работу банкоматов</label>
+                            <label for="badWork">Исправность банкоматов</label>
                             <input type="checkbox" id="slowWork" name="sadFor" value="slowWork">
                             <label for="slowWork">Скорость работы банкоматов</label>
                             <input type="checkbox" id="notEnoughfunc" name="sadFor" value="notEnoughfunc">
-                            <label for="notEnoughfunc">Широту функционала в банкоматах</label>
+                            <label for="notEnoughfunc">Широта функционала в банкоматах</label>
                             <input type="checkbox" id="badMenu" name="sadFor" value="badMenu">
-                            <label for="badMenu">Простоту меню</label>
+                            <label for="badMenu">Простота меню</label>
                             <div class="another-div transparent" id="another-div">
                                 <input type="checkbox" id="another" name="sadFor" value="another"
                                     onchange="toggleComment()">
-                                <label for="another" id="label-another">Другое (укажите):</label>
+                                <label for="another" id="label-another">Другое</label>
                                 <input type="text" id="another-input" class="hidden">
                             </div>
                         </fieldset>
